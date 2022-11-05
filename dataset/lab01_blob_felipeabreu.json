@@ -1,0 +1,24 @@
+{
+    "name": "lab01_blob_felipeabreu",
+    "properties": {
+        "linkedServiceName": {
+            "referenceName": "blob_felipeabreu",
+            "type": "LinkedServiceReference"
+        },
+        "folder": {
+            "name": "felipe_abreu"
+        },
+        "annotations": [],
+        "type": "Parquet",
+        "typeProperties": {
+            "location": {
+                "type": "AzureBlobStorageLocation",
+                "folderPath": "Lab01",
+                "container": "felipe-abreu"
+            },
+            "compressionCodec": "none"
+        },
+        "schema": []
+    },
+    "type": "Microsoft.DataFactory/factories/datasets"
+}
