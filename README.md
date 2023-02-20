@@ -15,16 +15,10 @@ O arquivo contendo os valores está no formato CSV.
 
 Estruturação do Projeto:
 
-
-Dicionário de dados:
-
-    CAMPO                         TIPO                  	                             
-cotacaoCompra	                    float	
-cotacaoVenda	                    float	
-dataHoraCotacao	                 datetime	
+![DICIONARIO DE DADOS](https://user-images.githubusercontent.com/57818977/220189519-f1a5b7e0-cecf-434f-8a40-1ae7a25d77b7.png)
 
 
-To Do
+To Do:
 
 Azure SQL
 Schemas:
@@ -38,3 +32,8 @@ Data Factory:
 - Criar uma atividade de procedure para executar a procedure de conversão do Azure SQL;
 - Criar uma atividade de copiar buscando os dados da tabela final com dados convertidos e salvar como PARQUET no blob.
 - Dica de source: HTTP.
+
+
+RESULTADO FINAL PIPELINE AZURE DATAFACTORY:
+
+![Pipeline](https://user-images.githubusercontent.com/57818977/220189104-15b630e4-95c4-4e15-95ac-5ca1a3410982.png)
