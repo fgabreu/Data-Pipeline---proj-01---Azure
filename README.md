@@ -9,11 +9,32 @@ Arquitetura Proposta:
 
 ![ARQUITETURA](https://user-images.githubusercontent.com/57818977/220187836-817ab9fb-d9d1-4196-bbec-ddb59168d096.png)
 
+O link API do Banco Central com os valores do dólar é: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='01-01-2019'&@dataFinalCotacao='12-31-2025'&$top=9000&$format=text/csv&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao
+
+O arquivo contendo os valores está no formato CSV.
+
+Estruturação do Projeto:
 
 
-Dicionário de dados:           
+Dicionário de dados:
+
     CAMPO                         TIPO                  	                             
 cotacaoCompra	                    float	
 cotacaoVenda	                    float	
 dataHoraCotacao	                 datetime	
 
+
+To Do
+
+Azure SQL
+Schemas:
+- Criar uma tabela stage chamada schema.dolar_Stage_seu_nome com o tipo de dado Varchar
+- Criar uma tabela final para receber os dados convertidos schema.dolar_final_seu_nome
+- CRIAR uma procedure (qualquer nome) dentro do seu schema para popular a tabela final com os dados convertidos.
+
+
+Data Factory:
+- Copiar os dados vindo do banco central e popular a tabela stage;
+- Criar uma atividade de procedure para executar a procedure de conversão do Azure SQL;
+- Criar uma atividade de copiar buscando os dados da tabela final com dados convertidos e salvar como PARQUET no blob.
+- Dica de source: HTTP.
