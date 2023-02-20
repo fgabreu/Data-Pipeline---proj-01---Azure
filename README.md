@@ -9,7 +9,7 @@ Arquitetura Proposta:
 
 ![ARQUITETURA](https://user-images.githubusercontent.com/57818977/220187836-817ab9fb-d9d1-4196-bbec-ddb59168d096.png)
 
-O link API do Banco Central com os valores do dólar é: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='01-01-2019'&@dataFinalCotacao='12-31-2025'&$top=9000&$format=text/csv&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao
+O link API do Banco Central com os valores do dólar: https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/CotacaoDolarPeriodo(dataInicial=@dataInicial,dataFinalCotacao=@dataFinalCotacao)?@dataInicial='01-01-2019'&@dataFinalCotacao='12-31-2025'&$top=9000&$format=text/csv&$select=cotacaoCompra,cotacaoVenda,dataHoraCotacao
 
 O arquivo contendo os valores está no formato CSV.
 
